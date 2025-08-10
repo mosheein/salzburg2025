@@ -956,9 +956,29 @@
                     "\u05e2\u05de\u05e7 \u05d2\u05e1\u05d8\u05d9\u05d9\u05df \u05d5\u05d4\u05e1\u05d1\u05d9\u05d1\u05d4 | Gastein Valley" : feature_group_5d1ae56dfb1a481ced7215b391d68a6d,
                     "\u05d8\u05e0\u05e0\u05d2\u05d0\u05d5 \u05d5\u05d0\u05d1\u05d8\u05e0\u05d0\u05d5 | Tennengau \u0026 Abtenau" : feature_group_b33fefc41c7fe94d4d46cec538784840,
                     "\u05de\u05d7\u05d5\u05d6 \u05d4\u05d0\u05d2\u05de\u05d9\u05dd \u05d5\u05d0\u05d5\u05e1\u05d8\u05e8\u05d9\u05d4 \u05e2\u05d9\u05dc\u05d9\u05ea | Lakes District \u0026 Upper Austria" : feature_group_a562d2ec359d91df8757deb2def219ba,
-                },
+                
+                    "המלצות מליאור" : feature_group_7590b63de91e49f2,},
             };
-            L.control.layers(
+            
+
+            // --- שכבת "המלצות מליאור" (תיקון קישורים) ---
+            var feature_group_7590b63de91e49f2 = L.featureGroup({}).addTo(map_32aac38ed48ce72ac3e637d9d811b6ce);
+
+            // נקודה 1: Badesee St. Johann
+            var marker_lior_1 = L.marker([47.5232, 12.4330], {}).addTo(feature_group_7590b63de91e49f2);
+            var icon_lior_1 = L.AwesomeMarkers.icon({"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "lightblue", "prefix": "glyphicon"});
+            marker_lior_1.setIcon(icon_lior_1);
+            var popup_lior_1 = L.popup({"maxWidth": 270}).setContent('<div style=\'direction: rtl; font-size: 14px;\'>\n  <b>אגם רחצה סנט יוהאן</b><br/>\n  <span style=\'direction: ltr;\'>Badesee St. Johann</span><br/>\n  <p>אגם רחצה פסטורלי מוקף הרים, עם חוף מסודר ומים נעימים בקיץ – מתאים למשפחות. מידע מ"ליאור".</p>\n  <a href="https://www.google.com/maps/place/Badesee+St.+Johann" target="_blank" rel="noopener">לצפייה בגוגל מפות</a>\n</div>');
+            marker_lior_1.bindPopup(popup_lior_1);
+
+            // נקודה 2: Erlebnispark Familienland Pillersee
+            var marker_lior_2 = L.marker([47.5137, 12.5851], {}).addTo(feature_group_7590b63de91e49f2);
+            var icon_lior_2 = L.AwesomeMarkers.icon({"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "lightblue", "prefix": "glyphicon"});
+            marker_lior_2.setIcon(icon_lior_2);
+            var popup_lior_2 = L.popup({"maxWidth": 270}).setContent('<div style=\'direction: rtl; font-size: 14px;\'>\n  <b>פארק ההרפתקאות פאמיליינלנד פילרזה</b><br/>\n  <span style=\'direction: ltr;\'>Erlebnispark Familienland Pillersee</span><br/>\n  <p>פארק משפחתי עם מעל 50 אטרקציות כולל רכבת הרים, אגם מלח, מגלשות ואזורים מקורים וחיצוניים. מידע מ"ליאור".</p>\n  <a href="https://www.google.com/maps/place/Erlebnispark+Familienland+Pillersee" target="_blank" rel="noopener">לצפייה בגוגל מפות</a>\n</div>');
+            marker_lior_2.bindPopup(popup_lior_2);
+
+L.control.layers(
                 layer_control_c7561bc4a909a7bce7970eee1927e4f4.base_layers,
                 layer_control_c7561bc4a909a7bce7970eee1927e4f4.overlays,
                 {"autoZIndex": true, "collapsed": false, "position": "topright"}
